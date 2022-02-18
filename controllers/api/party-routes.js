@@ -21,4 +21,19 @@ router.get('/', (req, res) => {
       });
   });
 
+  // get a specific party
+router.get('/:id', (req, res) => {
+    Party.findOne({
+        attributes: {exclude: ['password'] },
+        where: {
+            id: req.params.id
+        }
+    })
+    .then(dbPartyData => res.json(dbPartyData))
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    });
+});
+
 module.exports = router;
