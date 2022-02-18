@@ -14,14 +14,16 @@ Party.init(
         type: DataTypes.STRING,
         allowNull: false
       },
-      GM_id: {
-        type: DataTypes.INTEGER,
-      },
-      party_characters: {
-        type: DataTypes.INTEGER,
-      },
       party_pass: {
-        type: DataTypes.STRING,
+        type: DataTypes.STRING
+      },
+      character_id: {
+        type: DataTypes.INTEGER,
+        allowNull: false
+      },
+      user_id: {
+        type: DataTypes.INTEGER,
+        allowNull: false
       }    
     },
     {

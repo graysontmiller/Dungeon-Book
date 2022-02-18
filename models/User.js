@@ -37,12 +37,6 @@ User.init(
       validate: {
         len: [4, 24]
       }
-    },
-    characters: {
-        type: DataTypes.INTEGER,
-    },
-    parties: {
-        type: DataTypes.INTEGER,
     }
   },
   {
