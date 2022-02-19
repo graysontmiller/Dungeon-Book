@@ -6,14 +6,7 @@ const { Party } = require('../../models');
 // get all users
 router.get('/', (req, res) => {
     console.log('======================');
-    Party.findAll({
-      attributes: [
-        'party_name',
-        'party_pass',
-        'character_id',
-        'user_id',
-      ]
-    })
+    Party.findAll()
       .then(dbPartyData => res.json(dbPartyData))
       .catch(err => {
         console.log(err);
