@@ -3,7 +3,7 @@
   <div class=" col-lg-4">
       <img src="/Assets/dice-d20.svg" alt="">
   </div>
-  <form class="login-form col-lg-8">
+  <form class="signup-form col-lg-8">
       <div class="mb-3">
         <label for="username-signup" class="form-label">Username</label>
         <input type="text" id="username-signup" placeholder="Username" class="form-control" />
@@ -18,12 +18,29 @@
       </div>
       <div class="mb-3 row">
           <div class="col-lg-7">
-              <button type="submit" class="btn-primary">login</button>
+              <button type="submit" class="btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">submit</button>
           </div>
           <div class="col-lg-5 text-lg-end ">
-              <p class="text-center"> Already have an account? <a href="">Log In!</a></p>
+              <p class="text-center"> Already have an account? <a href="/login">Log In!</a></p>
           </div>
       </div>
   </form>
+              <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="staticBackdropLabel">Success!</h5>
+                        </div>
+                        <div class="modal-body">
+                            Welcome to the DND something 🖥️
+                        </div>
+                        <div class="modal-footer">
+                            <a href="/home" class="btn btn-primary">Let's Get Started</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
 </section>
+
+<script src="/javascript/signup.js"></script>
