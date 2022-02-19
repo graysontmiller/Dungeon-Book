@@ -48,8 +48,8 @@ Character.belongsTo(User, {
 });
 
 
-Character.hasMany(Party, {
-  foreignKey: 'character_id',
+Character.belongsTo(Party, {
+  foreignKey: 'party_id',
   target: 'id'
 });
 
