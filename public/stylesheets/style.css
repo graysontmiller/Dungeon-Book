@@ -49,9 +49,11 @@
 
 /* header/footer */
 
-.header{
+.header,.footer{
     background-color: #1e293b;
 }
+
+
 
 .links{
     text-decoration: none;

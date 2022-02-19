@@ -2,7 +2,7 @@
   <div class="container-fluid row">
     <div class="col-6">
       <a class="navbar-brand" href="#">
-        <img src="../public/Assets/dice-d20-white.svg" alt="" width="50" height="50" class="navbar-brand d-inline-block align-text-top">
+        <img src="/Assets/dice-d20-white.svg" alt="" width="50" height="50" class="navbar-brand d-inline-block align-text-top">
       </a>
     </div>
     <div class="col-6 pt-3 text-end">
@@ -19,7 +19,7 @@
 
 
 
-<section class="row justify-content-around align-items-center gx-5 min-vh-100">
+<section class="row justify-content-around align-items-center gx-5">
     
   <section class=" col-lg-5 py-5">
     <div class="row gy-3">
@@ -100,13 +100,41 @@
       </div>
 
     <div class="text-center">
-      <button type="button" class="button-custom">Add a Campaign Group</button>
+      <button type="button" class="button-custom" data-bs-toggle="modal" data-bs-target="#campaignModal">Add a Campaign Party</button>
+    </div>
+
+  </div>
+  
+</section>
+
+
+
+<!-- Modal -->
+<div id="campaignModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+  
+  <!-- Modal content-->
+  <div class="modal-content">
+    <div class="modal-header">
+      <h4 class="modal-title">Add a Campaign Party</h4>
+      <button type="button" class="btn-close" data-dismiss="modal">&times;</button>
+    </div>
+    <div class="modal-body">
+      <label class="form-label">Enter your party pass to join a campaign party, or create a party.</label>
+      <input type="" class="form-control" id="" placeholder="mypartypass">
+      <div class="pt-3 row">
+        <div class="col-3">
+          <button class="button-custom text-center"> Enter</button>
+        </div>
+        <div class="col">
+          <button class="button-custom text-center"> Create a Party</button>
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="button-custom" data-bs-dismiss="modal">Close</button>
     </div>
   </div>
-</section>
-
-
-
   
-
-</section>
+  </div>
+  </div>
