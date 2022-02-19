@@ -16,35 +16,93 @@
 <!-- End of main.handlebars/ where {{{Body}}} -->
 
 
+<header class="container-fluid py-3 bg-dark"> 
+  <div class="row">
+    <section class="col-6">
+      <div class="row">
+        <h4 class=" col-12 text-light">Campaign Name</h4>         
+        <h6 class=" col-12 text-muted">Campaign Created By _____ <Strong>name</Strong></h6> 
+      </div>
+    </section>
+    <div class="col-6 text-end">
+      <button type="button" class="btn-close btn-close-white" aria-label="Close">back to homepage</button>
+    </div>
+  </div>
+</header>
+
 <section class="row justify-content-around align-items-center gx-5 min-vh-100">
     
-  <div class=" col-lg-4">
-      <img src="/Assets/dice-d20.svg" alt="">
-  </div>
-  <form class="login-form col-lg-8">
-      <div class="mb-3">
-        <label for="username-signup" class="form-label">Username</label>
-        <input type="text" id="username-signup" placeholder="Username" class="form-control" />
-      </div>
-      <div class="mb-3">
-          <label for="email-signup" class="form-label">Email Address</label>
-          <input type="text" id="email-signup" placeholder="Email Address" class="form-control" />
-      </div>
-      <div class="mb-3">
-          <label for="password-signup" class="form-label">Password</label>
-          <input type="password" id="password-signup" placeholder="Password" class="form-control" />
-      </div>
-      <div class="mb-3 row">
-          <div class="col-lg-7">
-              <button type="submit" class="btn-primary">login</button>
+    <section class=" col-lg-5 py-5">
+        <div class="row gy-3">
+            <p class="h3 text-center"> The Fellowship</p> <!-- Campaign group title-->
+
+            <div class="card ">
+              <div class="card-body">
+                  <div class="row">
+                      <div class="col-8">
+                          <h5 class="card-title">Legolas</h5>
+                      </div>
+                      <div class="col-4">
+                          <p> Added By: Grayson</p>
+                      </div>
+                  </div>
+                <hr>
+                <div class="row">
+                    <div class="col-8">
+                        <h6 class="card-subtitle mb-2 text-muted">Elf</h6>
+                        <h6 class="card-subtitle mb-2 text-muted">Ranger</h6> 
+                    </div>
+                    <button class="col-4 btn-primary">expand</button>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card" >
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-8">
+                            <h5 class="card-title">Character Name</h5>
+                        </div>
+                        <div class="col-4">
+                            <p> Added By: _____</p>
+                        </div>
+                    </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-8">
+                        <h6 class="card-subtitle mb-2 text-muted">Race</h6>
+                        <h6 class="card-subtitle mb-2 text-muted">Class</h6> 
+                    </div>
+                    <button class="col-4 btn-primary">expand</button>
+                </div>
+              </div>
+        </div>
+        <div class="card" >
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-8">
+                        <h5 class="card-title">Character Name</h5>
+                    </div>
+                    <div class="col-4">
+                        <p> Added By: _____</p>
+                    </div>
+                </div>
+              <hr>
+              <div class="row">
+                <div class="col-8">
+                    <h6 class="card-subtitle mb-2 text-muted">Race</h6>
+                    <h6 class="card-subtitle mb-2 text-muted">Class</h6> 
+                </div>
+                <button class="col-4 btn-primary">expand</button>
+            </div>
           </div>
-          <div class="col-lg-5 text-lg-end ">
-              <p class="text-center"> Already have an account? <a href="">Log In!</a></p>
-          </div>
-      </div>
-  </form>
+    </section>
+
+   
 
 </section>
+
+
 
        
 
