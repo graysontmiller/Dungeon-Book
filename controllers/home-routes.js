@@ -4,25 +4,32 @@ const { User, Character, Stats , PClass , Hp , Combat , Party } = require('../mo
 
 router.get('/', (req, res) => {
   console.log(req.session);
-  res.render('homepage')
+  res.render('welcome')
 });
 
 router.get('/login', (req, res) => {
   if (req.session.loggedIn) {
-    res.redirect('/');
+    res.redirect('/home');
     return;
   }
 
   res.render('login');
 });
 
-// router.get('/register', (req, res) => {
-//   if (req.session.loggedIn) {
-//     res.redirect('/');
-//     return;
-//   }
+router.get('/signup', (req, res) => {
+  if (req.session.loggedIn) {
+    res.redirect('/home');
+    return;
+  }
 
-//   res.render('register');
-// });
+  res.render('signup');
+});
+
+router.get('/home', (req, res) => {
+  console.log(req.session);
+
+  res.render('homepage');
+});
+
 
 module.exports = router;
