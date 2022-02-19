@@ -15,116 +15,143 @@
       <main>
 <!-- End of main.handlebars/ where {{{Body}}} -->
 
-<header class="header pt-3 pb-3">
-  <div class="container-fluid row">
-    <div class="col-6">
-      <a class="navbar-brand" href="#">
-        <img src="../public/Assets/dice-d20-white.svg" alt="" width="50" height="50" class="navbar-brand d-inline-block align-text-top">
-      </a>
-    </div>
-    <div class="col-6 pt-3 text-end">
+<  <div class="container-fluid row">
+  <div class="col-6">
+    <a class="navbar-brand" href="#">
+      <img src="/Assets/dice-d20-white.svg" alt="" width="50" height="50" class="navbar-brand d-inline-block align-text-top">
+    </a>
+  </div>
+  <div class="col-6 pt-3 text-end">
+
+    <li>
+      <a href="" class="text-light links">Log Out</a>
+    </li>
+    <li>
+      <a href="https://github.com/graysontmiller/Project2" class="text-light links">About</a>
+    </li>
+  </div>
+</div>
+</header>
+  
+<section class=" col-lg-5 py-5">
+  <div class="row gy-3">
+      <p class="h3 text-center"> Your Characters</p>
+     
+      <div class="clickme">
+        <a href=""></a>
+        <section class="card-body bg-white rounded-3 shadow-sm">
+        
+              <h3>Legolas</h3>
+              <hr>
+              <div class="row">
+                  <div >
+                      <h6 class="text-muted">Ranger</h6> 
+                  </div>
+              </div>
+          
+        </section>
+      </div>
       
-      <li>
-        <a href="" class="text-light links">Log Out</a>
-      </li>
-      <li>
-        <a href="https://github.com/graysontmiller/Project2" class="text-light links">About</a>
-      </li>
+
+
+      <div class="clickme">
+        <a href=""></a>
+        <section class="card-body bg-white rounded-3 shadow-sm">
+        
+              <h3>Legolas</h3>
+              <hr>
+              <div class="row">
+                  <div >
+                      <h6 class="text-muted">Ranger</h6> 
+                  </div>
+              </div>
+          
+        </section>
+      </div>
+
+    <div class="text-center">
+      <button type="button" class="button-custom">Add a Character Profile</button>
     </div>
-    <div class="row">
-      <section class="col-6">
-        <div class="row">
-          <h4 class=" col-12 text-light">Campaign Name</h4>         
-          <h6 class=" col-12 text-muted">Campaign Created By _____ <Strong>name</Strong></h6> 
-        </div>
+  </div>
+</section>
+
+
+<section class=" col-lg-5 py-5">
+<div class="row gy-3">
+    <p class="h3 text-center"> Your Campaigns</p>
+   
+    <div class="clickme">
+      <a href=""></a>
+      <section class="card-body bg-white rounded-3 shadow-sm">
+      
+            <h3>Campaign</h3>
+            <hr>
+            <div class="row">
+                <div >
+                    <h6 class="text-muted">members</h6> 
+                </div>
+            </div>
+        
+      </section>
+    </div>
+    
+
+    <div class="clickme">
+      <a href=""></a>
+      <section class="card-body bg-white rounded-3 shadow-sm">
+      
+            <h3>The Fellowship</h3>
+            <hr>
+            <div class="row">
+                <div >
+                    <h6 class="text-muted">Frodo, Sam, Marry, Pippin</h6> 
+                </div>
+            </div>
+        
       </section>
     </div>
 
+  <div class="text-center">
+    <button type="button" class="button-custom" data-bs-toggle="modal" data-bs-target="#campaignModal">Add a Campaign Party</button>
   </div>
-</header>
+
+</div>
+
+</section>
 
 
-<section class="row justify-content-around align-items-center gx-5">
-    
-    <section class=" col-lg-5 py-5">
-        <div class="row gy-3">
-           
 
-            <div class="clickme">
-              <a href=""></a>
-              <section class="card-body bg-white rounded-3 shadow-sm">
-              
-                    <h3>Legolas</h3>
-                    <hr>
-                    <div class="row">
-                        <div class="col-6">
-                            <h6 class="text-muted">Ranger</h6> 
-                        </div>
-                        <div class="col-6">
-                          <p class="text-muted"> Added By: Grayson</p>
-                      </div>
-                    </div>
-                
-              </section>
-            </div>
+<!-- Modal -->
+<div id="campaignModal" class="modal fade" role="dialog">
+<div class="modal-dialog">
 
-            <div class="clickme">
-              <a href=""></a>
-              <section class="card-body bg-white rounded-3 shadow-sm">
-              
-                    <h3>Legolas</h3>
-                    <hr>
-                    <div class="row">
-                        <div class="col-6">
-                            <h6 class="text-muted">Ranger</h6> 
-                        </div>
-                        <div class="col-6">
-                          <p class="text-muted"> Added By: Grayson</p>
-                      </div>
-                    </div>
-                
-              </section>
-            </div>
-            
-            <div class="clickme">
-              <a href=""></a>
-              <section class="card-body bg-white rounded-3 shadow-sm">
-              
-                    <h3>Legolas</h3>
-                    <hr>
-                    <div class="row">
-                        <div class="col-6">
-                            <h6 class="text-muted">Ranger</h6> 
-                        </div>
-                        <div class="col-6">
-                          <p class="text-muted"> Added By: Grayson</p>
-                      </div>
-                    </div>
-                
-              </section>
-            </div>
+<!-- Modal content-->
+<div class="modal-content">
+  <div class="modal-header">
+    <h4 class="modal-title">Add a Campaign Party</h4>
+    <button type="button" class="btn-close" data-dismiss="modal">&times;</button>
+  </div>
+  <div class="modal-body">
+    <label class="form-label">Enter your party pass to join a campaign party, or create a party.</label>
+    <input type="" class="form-control" id="" placeholder="mypartypass">
+    <div class="pt-3 row">
+      <div class="col-3">
+        <button class="button-custom text-center"> Enter</button>
+      </div>
+      <div class="col">
+        <button class="button-custom text-center"> Create a Party</button>
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="button-custom" data-bs-dismiss="modal">Close</button>
+  </div>
+</div>
 
-            <div class="clickme">
-              <a href=""></a>
-              <section class="card-body bg-white rounded-3 shadow-sm">
-              
-                    <h3>Legolas</h3>
-                    <hr>
-                    <div class="row">
-                        <div class="col-6">
-                            <h6 class="text-muted">Ranger</h6> 
-                        </div>
-                        <div class="col-6">
-                          <p class="text-muted"> Added By: Grayson</p>
-                      </div>
-                    </div>
-                
-              </section>
-            </div>
-
-    </section>
-
-   
+</div>
+</div>
+</section>
+<script src="/javascript/logout.js"></script>
 
 
   
