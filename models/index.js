@@ -12,7 +12,8 @@ User.hasMany(Character, {
 
 
 User.hasMany(Party, {
-  foreignKey: 'user_id',
+  as: 'player',
+  foreignKey: 'player_id',
   target: 'id'
 });
 
@@ -22,6 +23,11 @@ User.hasMany(Party, {
 
 Character.belongsTo(User, {
   foreignKey: 'user_id',
+  target: 'id'
+});
+
+Character.belongsTo(Party, {
+  foreignKey: 'party_id',
   target: 'id'
 });
 
@@ -43,7 +49,7 @@ Character.belongsTo(User, {
 
 Party.belongsTo(User, {
   as: 'GM',
-  foreignKey: 'user_id',
+  foreignKey: 'GM_id',
   target: 'id'
 });
 
