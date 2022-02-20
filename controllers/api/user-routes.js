@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User, Character, Stats , PClass , Hp , Combat , Party  } = require('../../models');
+const { User, Character, Stats , PClass , Hp , Combat , Party , PartyGM , UserChar , UserCharParty  } = require('../../models');
 
 // get all users
 // GET /api/users

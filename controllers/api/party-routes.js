@@ -1,9 +1,9 @@
 const router = require('express').Router();
 const sequelize = require('../../config/connection');
-const { Party } = require('../../models');
+const { User, Character , Party , PartyGM , UserChar , UserCharParty  } = require('../../models');
 // const withAuth = require('../../utils/auth');
 
-// get all users
+// get all parties
 router.get('/', (req, res) => {
     console.log('======================');
     Party.findAll()

@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const sequelize = require('../config/connection');
 const withAuth = require('../utils/auth');
-const { User, Character, Stats , PClass , Hp , Combat , Party } = require('../models');
+const { User, Character, Stats , PClass , Hp , Combat , Party , PartyGM , UserChar , UserCharParty  } = require('../models');
 
 router.get('/', (req, res) => {
   console.log(req.session);
@@ -30,10 +30,31 @@ router.get('/character', withAuth, (req, res) => {
   res.render('character')
 });
 
+
+
 router.get('/home', withAuth, (req, res) => {
   console.log(req.session);
   console.log('======================');
-  res.render('homepage')
+  Character.findAll({
+    where: {
+      user_id: req.session.user_id
+    },
+    include: [
+      {
+        model: User,
+        attributes: ['username']
+      }
+    ]
+  })
+    .then(dbCharacterData => {
+      const characters = dbCharacterData.map(character => character.get({ plain: true }));
+      console.log(characters);
+      res.render('homepage', { characters, loggedIn: true });
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
 });
 
 
