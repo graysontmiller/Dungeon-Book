@@ -1,46 +1,24 @@
 const User = require('./User');
-const { Character, Stats , PClass , Hp , Combat } = require('./Character');
-const Userparty = require('./Userparty');
+const { Character } = require('./Character');
 const Party = require('./Party');
+const PartyGM = require('./PartyGM');
+const UserChar = require('./UserChar');
+const UserCharParty = require('./UserCharParty');
 
 User.hasMany(Character, {
-    foreignKey: 'user_id',
-    target: 'id'
-  });
-  
+  foreignKey: 'user_id',
+  target: 'id'
+});
+
+
 User.hasMany(Party, {
-    foreignKey: 'user_id',
-    target: 'id'
-});
-  
-User.belongsToMany(Party, {
-    as: 'user_parties',
-    foreignKey: 'id',
-    target: 'id',
-    through: Userparty
-});
-  
-  
-User.hasMany(Userparty, {
-    foreignKey: 'user_id',
-    target: 'id'
-});
-
-Character.hasOne(Stats, {
-  foreignKey: 'character_id',
+  foreignKey: 'user_id',
   target: 'id'
 });
 
-Character.hasOne(Hp, {
-  foreignKey: 'character_id',
-  target: 'id'
-});
-
-
-Character.hasOne(Combat, {
-  foreignKey: 'character_id',
-  target: 'id'
-});
+// User.belongsToMany(Party, {
+//   through: PartyGM
+// });
 
 Character.belongsTo(User, {
   foreignKey: 'user_id',
@@ -48,42 +26,60 @@ Character.belongsTo(User, {
 });
 
 
-Character.hasMany(Party, {
-  foreignKey: 'character_id',
+// Character.hasMany(Party, {
+//   foreignKey: 'character_id',
+//   target: 'id'
+// });
+
+// PartyGM.belongsTo(User, {
+//   foreignKey: 'user_id',
+//   target: 'id'
+// });
+
+// PartyGM.belongsTo(Party, {
+//   foreignKey: 'party_id',
+//   target: 'id'
+// });
+
+Party.belongsTo(User, {
+  as: 'GM',
+  foreignKey: 'user_id',
   target: 'id'
 });
 
-Party.belongsToMany(User, {
-  as: 'user_parties',
-  foreignKey: 'id',
-  target: 'id',
-  through: Userparty
-});
-
-
-Party.hasMany(Userparty, {
+Party.hasMany(Character, {
   foreignKey: 'party_id',
   target: 'id'
 });
 
-Stats.belongsTo(Character, {
-  foreignKey: 'character_id',
-  target: 'id'
-});
+// Party.hasMany(UserChar, {
+//   foreignKey: 'party_id',
+//   target: 'id'
+// });
 
-PClass.belongsTo(Character, {
-    foreignKey: 'character_id',
-    target: 'id'
-});
+// UserChar.belongsTo(User, {
+//   foreignKey: 'user_id',
+//   target: 'id'
+// });
 
-Hp.belongsTo(Character, {
-    foreignKey: 'character_id',
-    target: 'id'
-  });
+// UserChar.belongsTo(Character, {
+//   foreignKey: 'character_id',
+//   target: 'id'
+// });
 
-Combat.belongsTo(Character, {
-  foreignKey: 'character_id',
-  target: 'id'
-});
 
-module.exports = { User, Character, Stats , PClass , Hp , Combat , Party , Userparty };
+// UserChar.belongsToMany(Party, {
+//   through: UserCharParty
+// });
+
+// UserCharParty.belongsTo(Party, {
+//   foreignKey: 'party_id',
+//   target: 'id'
+// });
+
+// UserCharParty.belongsTo(UserChar, {
+//   foreignKey: 'UserChar',
+//   target: 'id'
+// });
+
+module.exports = { User, Character , Party , PartyGM , UserChar , UserCharParty };

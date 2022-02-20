@@ -1,30 +1,37 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Userparty extends Model {}
-Userparty.init(
+class UserCharParty extends Model {}
+UserCharParty.init(
     {
-    userId: {
+    id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      primaryKey: true,
+      autoIncrement: true
+    },
+    UserChar: {
         type: DataTypes.INTEGER,
         references: {
-            model: 'user',
+            model: 'userChar',
             key: 'id'
           }
     },
-    characterId: {
+    party_id: {
         type: DataTypes.INTEGER,
         references: {
-            model: 'character',
+            model: 'party',
             key: 'id'
           }
     } 
     },
     {
       sequelize,
+      timestamps: false,
       freezeTableName: true,
       underscored: true,
-      modelName: 'userparty'
+      modelName: 'userCharParty'
     }
   );
   
-module.exports = Userparty;
+module.exports = UserCharParty;
