@@ -15,6 +15,23 @@
       <main>
 <!-- End of main.handlebars/ where {{{Body}}} -->
 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dungeon Book</title>
+  <link href="../public/stylesheets/bootstrap.min.css" rel="stylesheet">
+  <link href="../public/stylesheets/style.css" rel="stylesheet">
+</head>
+
+<body class="bg-light">
+  <div class="container">
+    <div class="row">
+      <main>
+<!-- End of main.handlebars/ where {{{Body}}} -->
+
 <header class="header pt-3 pb-3">
   <div class="container-fluid row">
     <div class="col-6">
@@ -44,7 +61,7 @@
 </header>
 
 
-<!-- <section class="row justify-content-around align-items-center gx-5">
+<section class="row justify-content-around align-items-center gx-5">
     
     <section class=" col-lg-5 py-5">
         <div class="row gy-3">
@@ -122,11 +139,89 @@
               </section>
             </div>
 
+            <div class="text-center">
+              <button type="button" class="button-custom" data-bs-toggle="modal" data-bs-target="#campaignCharacterModal">Add a Character to the Party</button>
+            </div>
+
     </section>
 
    
 
-</section> -->
+</section>
+
+
+<!-- Modal -->
+<div id="campaignCharacterModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+  
+  <!-- Modal content-->
+  <div class="modal-content">
+    <div class="modal-header">
+      <h4 class="modal-title">Select a Character to Add to the Party:</h4>
+      
+    </div>
+
+    <div class="modal-body">
+          
+          <div class="pt-3">
+            <input class="checkbox" type="checkbox" name="check1" id="check1">
+            <label class="checklabel" for="check1">Character Name</label>
+          </div>
+          <div class="pt-3">
+            <input class="checkbox" type="checkbox" name="check1" id="check1">
+            <label class="checklabel" for="check1">Character Name</label>
+          </div>
+          <div class="pt-3">
+            <input class="checkbox" type="checkbox" name="check1" id="check1">
+            <label class="checklabel" for="check1">Character Name</label>
+          </div>
+          <div class="pt-3">
+            <input class="checkbox" type="checkbox" name="check1" id="check1">
+            <label class="checklabel" for="check1">Character Name
+
+              <div class="col-12 text-muted pt-1">
+                Class, 10
+              </div>
+
+            </label>
+          </div>
+
+
+    
+
+      <div class="col pt-5 text-center">
+        <button class="button-custom text-center"> Add This Character to the Party</button>
+      </div>
+
+      <div class="col pt-3 text-center">
+        <button class="button-custom text-center"> Create a New Character</button>
+      </div>
+
+    </div>
+
+    <div class="modal-footer">
+      <button type="button" class="button-custom" data-bs-dismiss="modal">Close</button>
+    </div>
+  </div>
+  
+  </div>
+  </div>
+  <script src="/javascript/logout.js"></script>
+
+
+       
+
+
+
+<!-- continue main.handlebars -->
+</main>
+</div>
+</div>
+
+<script src="../public/javascript/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
 
 
        
