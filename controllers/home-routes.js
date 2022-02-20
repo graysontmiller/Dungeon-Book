@@ -35,7 +35,7 @@ router.get('/character', withAuth, (req, res) => {
 router.get('/home', withAuth, (req, res) => {
   console.log(req.session);
   console.log('======================');
-  Character.findAll({
+  const userCharacter = Character.findAll({
     where: {
       user_id: req.session.user_id
     },
@@ -45,11 +45,29 @@ router.get('/home', withAuth, (req, res) => {
         attributes: ['username']
       }
     ]
-  })
-    .then(dbCharacterData => {
-      const characters = dbCharacterData.map(character => character.get({ plain: true }));
+  });
+
+  const userParty = Party.findAll({
+    where: {
+      GM_id: req.session.user_id
+    },
+    include: [
+      {
+        model: User,
+        as: 'GM',
+        attributes: ['username']
+      }
+    ]
+  });
+
+  Promise
+    .all([userCharacter , userParty])
+    .then(userData => {
+      const characters = userData[0].map(character => character.get({ plain: true }));
+      const parties = userData[1].map(party => party.get({ plain: true }));
       console.log(characters);
-      res.render('homepage', { characters, loggedIn: true });
+      console.log(parties);
+      res.render('homepage', { characters, parties, loggedIn: true });
     })
     .catch(err => {
       console.log(err);
