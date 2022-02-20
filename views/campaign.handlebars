@@ -1,3 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dungeon Book</title>
+  <link href="../public/stylesheets/bootstrap.min.css" rel="stylesheet">
+  <link href="../public/stylesheets/style.css" rel="stylesheet">
+</head>
+
+<body class="bg-light">
+  <div class="container">
+    <div class="row">
+      <main>
+<!-- End of main.handlebars/ where {{{Body}}} -->
+
 <header class="header pt-3 pb-3">
   <div class="container-fluid row">
     <div class="col-6">
@@ -105,8 +122,69 @@
               </section>
             </div>
 
+            <div class="text-center">
+              <button type="button" class="button-custom" data-bs-toggle="modal" data-bs-target="#campaignCharacterModal">Add a Character to the Party</button>
+            </div>
+
     </section>
 
    
 
 </section>
+
+
+<!-- Modal -->
+<div id="campaignCharacterModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+  
+  <!-- Modal content-->
+  <div class="modal-content">
+    <div class="modal-header">
+      <h4 class="modal-title">Select a Character to Add to the Party:</h4>
+      
+    </div>
+
+    <div class="modal-body">
+          
+         {{#if characters.length}}
+            {{#each characters as |character|}}
+              {{> character-addToParty character}}
+            {{/each}}
+        {{/if}}
+
+
+    
+
+      <div class="col pt-5 text-center">
+        <a href="#" class="button-custom text-center"> Add This Character to the Party</a>
+      </div>
+
+      <div class="col pt-3 text-center">
+        <a href="#" class="button-custom text-center"> Create a New Character</a>
+      </div>
+
+    </div>
+
+    <div class="modal-footer">
+      <button type="button" class="button-custom" data-bs-dismiss="modal">Close</button>
+    </div>
+  </div>
+  
+  </div>
+  </div>
+  <script src="/javascript/logout.js"></script>
+
+
+
+
+
+
+<!-- continue main.handlebars -->
+</main>
+</div>
+</div>
+
+<script src="../public/javascript/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
