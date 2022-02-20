@@ -24,38 +24,11 @@
   <section class=" col-lg-5 py-5">
     <div class="row gy-3">
         <p class="h3 text-center"> Your Characters</p>
-       
-        <div class="clickme">
-          <a href=""></a>
-          <section class="card-body bg-white rounded-3 shadow-sm">
-          
-                <h3>Legolas</h3>
-                <hr>
-                <div class="row">
-                    <div >
-                        <h6 class="text-muted">Ranger</h6> 
-                    </div>
-                </div>
-            
-          </section>
-        </div>
-        
-
-
-        <div class="clickme">
-          <a href=""></a>
-          <section class="card-body bg-white rounded-3 shadow-sm">
-          
-                <h3>Legolas</h3>
-                <hr>
-                <div class="row">
-                    <div >
-                        <h6 class="text-muted">Ranger</h6> 
-                    </div>
-                </div>
-            
-          </section>
-        </div>
+        {{#if characters.length}}
+            {{#each characters as |character|}}
+              {{> character-info character}}
+            {{/each}}
+        {{/if}}
 
       <div class="text-center">
         <a href="/character" class="button-custom">Add a Character Profile</a>
