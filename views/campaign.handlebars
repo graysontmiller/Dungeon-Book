@@ -1,31 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dungeon Book</title>
-  <link href="../public/stylesheets/bootstrap.min.css" rel="stylesheet">
-  <link href="../public/stylesheets/style.css" rel="stylesheet">
-</head>
-
-<body class="bg-light">
-  <div class="container">
-    <div class="row">
-      <main>
-<!-- End of main.handlebars/ where {{{Body}}} -->
-
 <header class="header pt-3 pb-3">
   <div class="container-fluid row">
     <div class="col-6">
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" href="/home">
         <img src="/Assets/dice-d20-white.svg" alt="" width="50" height="50" class="navbar-brand d-inline-block align-text-top">
       </a>
     </div>
     <div class="col-6 pt-3 text-end">
       
       <li>
-        <a href="" class="text-light links">Log Out</a>
+        <a id="logout" href="#" class="text-light links">Log Out</a>
       </li>
       <li>
         <a href="https://github.com/graysontmiller/Project2" class="text-light links">About</a>
@@ -34,8 +17,8 @@
     <div class="row">
       <section class="col-6">
         <div class="row">
-          <h4 class=" col-12 text-light">Campaign Name</h4>         
-          <h6 class=" col-12 text-muted">Campaign Created By _____ <Strong>name</Strong></h6> 
+          <h4 class=" col-12 text-light">{{party.party_name}}</h4>         
+          <h6 class=" col-12 text-muted">Campaign Created By <Strong>{{#with party.GM}} {{username}} {{/with}}</Strong></h6> 
         </div>
       </section>
     </div>
@@ -50,77 +33,6 @@
         <div class="row gy-3">
            
 
-            <div class="clickme">
-              <a href=""></a>
-              <section class="card-body bg-white rounded-3 shadow-sm">
-              
-                    <h3>Legolas</h3>
-                    <hr>
-                    <div class="row">
-                        <div class="col-6">
-                            <h6 class="text-muted">Ranger</h6> 
-                        </div>
-                        <div class="col-6">
-                          <p class="text-muted"> Added By: Grayson</p>
-                      </div>
-                    </div>
-                
-              </section>
-            </div>
-
-            <div class="clickme">
-              <a href=""></a>
-              <section class="card-body bg-white rounded-3 shadow-sm">
-              
-                    <h3>Legolas</h3>
-                    <hr>
-                    <div class="row">
-                        <div class="col-6">
-                            <h6 class="text-muted">Ranger</h6> 
-                        </div>
-                        <div class="col-6">
-                          <p class="text-muted"> Added By: Grayson</p>
-                      </div>
-                    </div>
-                
-              </section>
-            </div>
-            
-            <div class="clickme">
-              <a href=""></a>
-              <section class="card-body bg-white rounded-3 shadow-sm">
-              
-                    <h3>Legolas</h3>
-                    <hr>
-                    <div class="row">
-                        <div class="col-6">
-                            <h6 class="text-muted">Ranger</h6> 
-                        </div>
-                        <div class="col-6">
-                          <p class="text-muted"> Added By: Grayson</p>
-                      </div>
-                    </div>
-                
-              </section>
-            </div>
-
-            <div class="clickme">
-              <a href=""></a>
-              <section class="card-body bg-white rounded-3 shadow-sm">
-              
-                    <h3>Legolas</h3>
-                    <hr>
-                    <div class="row">
-                        <div class="col-6">
-                            <h6 class="text-muted">Ranger</h6> 
-                        </div>
-                        <div class="col-6">
-                          <p class="text-muted"> Added By: Grayson</p>
-                      </div>
-                    </div>
-                
-              </section>
-            </div>
 
             <div class="text-center">
               <button type="button" class="button-custom" data-bs-toggle="modal" data-bs-target="#campaignCharacterModal">Add a Character to the Party</button>
@@ -145,22 +57,17 @@
     </div>
 
     <div class="modal-body">
-          
-         {{#if characters.length}}
+        {{#if characters.length}}
             {{#each characters as |character|}}
               {{> character-addToParty character}}
             {{/each}}
-        {{/if}}
-
-
-    
-
+        {{/if}}  
       <div class="col pt-5 text-center">
-        <a href="#" class="button-custom text-center"> Add This Character to the Party</a>
+        <button class="button-custom text-center"> Add This Character to the Party</button>
       </div>
 
       <div class="col pt-3 text-center">
-        <a href="#" class="button-custom text-center"> Create a New Character</a>
+        <button class="button-custom text-center"> Create a New Character</button>
       </div>
 
     </div>
@@ -173,18 +80,3 @@
   </div>
   </div>
   <script src="/javascript/logout.js"></script>
-
-
-
-
-
-
-<!-- continue main.handlebars -->
-</main>
-</div>
-</div>
-
-<script src="../public/javascript/bootstrap.bundle.min.js"></script>
-</body>
-
-</html>
