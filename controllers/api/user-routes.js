@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const withAuth = require('../../utils/auth');
 const { User, Character, Stats , PClass , Hp , Combat , Party , PartyGM , UserChar , UserCharParty  } = require('../../models');
 
 // get all users

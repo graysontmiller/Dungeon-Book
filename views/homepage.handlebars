@@ -40,38 +40,11 @@
 <section class=" col-lg-5 py-5">
   <div class="row gy-3">
       <p class="h3 text-center"> Your Campaigns</p>
-     
-      <div class="clickme">
-        <a href=""></a>
-        <section class="card-body bg-white rounded-3 shadow-sm">
-        
-              <h3>Campaign</h3>
-              <hr>
-              <div class="row">
-                  <div >
-                      <h6 class="text-muted">members</h6> 
-                  </div>
-              </div>
-          
-        </section>
-      </div>
-      
-
-      <div class="clickme">
-        <a href=""></a>
-        <section class="card-body bg-white rounded-3 shadow-sm">
-        
-              <h3>The Fellowship</h3>
-              <hr>
-              <div class="row">
-                  <div >
-                      <h6 class="text-muted">Frodo, Sam, Marry, Pippin</h6> 
-                  </div>
-              </div>
-          
-        </section>
-      </div>
-
+        {{#if parties.length}}
+          {{#each parties as |party|}}
+              {{> campaign-info party}}
+          {{/each}}
+        {{/if}}
     <div class="text-center">
       <button type="button" class="button-custom" data-bs-toggle="modal" data-bs-target="#campaignModal">Add a Campaign Party</button>
     </div>
@@ -92,27 +65,29 @@
       <h4 class="modal-title">Add a Campaign Party</h4>
       
     </div>
-    <div class="modal-body">
+    <form class="join-party modal-body">
       <label class="form-label">Enter your party pass to join a campaign party.</label>
-      <input type="" class="form-control" id="" placeholder="mypartypass">
+      <input type="text" class="form-control" id="party-pass-join" name="party-pass-join" placeholder="mypartypass">
       <div class="pt-3 row">
         <div class="col-3">
-          <button class="button-custom text-center"> Enter</button>
+          <button type="submit" class="button-custom text-center"> Enter</button>
         </div>
 
       </div>
-    </div>
+    </form>
 
-    <div class="modal-body">
+    <form class="create-party modal-body">
       <label class="form-label">Enter your Campaign Party Name</label>
-      <input type="" class="form-control" id="" placeholder="The Fellowship">
+      <input type="text" class="form-control" id="party-name" name="party-name" placeholder="The Fellowship">
+      <label class="form-label">Enter a unique party password</label>
+      <input type="text" class="form-control" id="party-pass" name="party-pass" placeholder="The Fellowship">
       <div class="pt-3 row">
         
         <div class="col">
-          <button class="button-custom text-center"> Create a Party</button>
+          <button type="submit" class="button-custom text-center"> Create a Party</button>
         </div>
       </div>
-    </div>
+    </form>
     <div class="modal-footer">
       <button type="button" class="button-custom" data-bs-dismiss="modal">Close</button>
     </div>
@@ -221,3 +196,5 @@
 
 
   <script src="/javascript/logout.js"></script>
+  <script src="/javascript/create-party.js"></script>
+  <script src="/javascript/join-party.js"></script>

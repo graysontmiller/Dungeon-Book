@@ -12,7 +12,6 @@ User.hasMany(Character, {
 
 
 User.hasMany(Party, {
-  as: 'player',
   foreignKey: 'player_id',
   target: 'id'
 });
