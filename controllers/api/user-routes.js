@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User } = require('../../models');
+const { User, Character, Stats , PClass , Hp , Combat , Party , PartyGM , UserChar , UserCharParty  } = require('../../models');
 
 // get all users
 // GET /api/users
@@ -22,7 +22,6 @@ router.get('/:id', (req, res) => {
     where: {
       id: req.params.id
     }
-  
   })
     .then(dbUserData => {
       if (!dbUserData) {
@@ -61,7 +60,6 @@ router.post('/', (req, res) => {
 
 // /api/users/login
 router.post('/login', (req, res) => {
-  // expects {email: 'lernantino@gmail.com', password: 'password1234'}
   User.findOne({
     where: {
       username: req.body.username

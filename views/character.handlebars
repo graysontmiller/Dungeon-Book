@@ -1,16 +1,30 @@
 <link rel="stylesheet" href="/stylesheets/sheet-style.css">
 
-<header class="container-fluid py-3 bg-dark"> 
-  <div class="row">
-    <section class="col-6">
-      <div class="row">
-        <h4 class=" col-12 text-light">Character Name</h4>         
-        <h6 class=" col-12 text-muted">Character created by <Strong>name</Strong></h6> 
-      </div>
-    </section>
-    <div class="col-6 text-end">
-      <button type="button" class="btn-close btn-close-white" aria-label="Close">back to homepage</button>
+<header class="header pt-3 pb-3">
+  <div class="container-fluid row">
+    <div class="col-6">
+      <a class="navbar-brand" href="#">
+        <img src="/Assets/dice-d20-white.svg" alt="" width="50" height="50" class="navbar-brand d-inline-block align-text-top">
+      </a>
     </div>
+    <div class="col-6 pt-3 text-end">
+      
+      <li>
+        <a href="" class="text-light links">Log Out</a>
+      </li>
+      <li>
+        <a href="https://github.com/graysontmiller/Project2" class="text-light links">About</a>
+      </li>
+    </div>
+    <div class="row">
+      <section class="col-6">
+        <div class="row">
+          <h4 class=" col-12 text-light">Character Name</h4>         
+          <h6 class=" col-12 text-muted">Character Created By _____ <Strong>name</Strong></h6> 
+        </div>
+      </section>
+    </div>
+
   </div>
 </header>
   
@@ -28,9 +42,6 @@
                 </li>
                 <li>
                   <label for="background">Background</label><input name="background" placeholder="Acolyte" />
-                </li>
-                <li>
-                  <label for="playername">Player Name</label><input name="playername" placeholder="Player McPlayerface">
                 </li>
                 <li>
                   <label for="race">Race</label><input name="race" placeholder="Half-elf" />
@@ -385,4 +396,6 @@
       </div>
 
 
-       
+          <div class="col text-center mb-5">
+              <button class="button-custom"> Update Character Sheet </button>
+          </div>

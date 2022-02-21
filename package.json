@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --watch --verbose",
     "start": "node server.js"
   },
   "repository": {
@@ -19,14 +19,19 @@
   "homepage": "https://github.com/graysontmiller/Project2#readme",
   "dependencies": {
     "bcrypt": "^5.0.1",
+    "chai": "4.3.6",
     "connect-session-sequelize": "^7.1.2",
     "dotenv": "^16.0.0",
     "express": "^4.17.2",
     "express-handlebars": "^6.0.2",
     "express-session": "^1.17.2",
     "jest": "^27.5.1",
+    "mocha": "^9.2.1",
     "mysql2": "^2.3.3",
     "pdf-lib": "^1.17.1",
     "sequelize": "^6.16.1"
+  },
+  "devDependencies": {
+    "supertest": "^6.2.2"
   }
 }
