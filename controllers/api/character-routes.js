@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const withAuth = require('../../utils/auth');
 const { User, Character , Party , PartyGM , UserChar , UserCharParty  } = require('../../models');
 
 router.get('/', (req, res) => {
@@ -25,7 +26,6 @@ router.get('/test', (req, res) => {
 });
 
 router.post('/', (req, res) => {
-   
     Character.create({
         user_id: req.body.user_id,
         full_name: req.body.full_name,
@@ -58,3 +58,27 @@ router.post('/', (req, res) => {
 });
 
 module.exports = router;
+
+
+// {
+//   "user_id": 2,
+//   "full_name": "Jimmy Neutron",
+//   "alignment": "Chaotic Evil",
+//   "race": "Acorn",
+//   "xp": 4200,
+//   "hp_max": 10000,
+//   "hp_current": 9999,
+//   "hp_temp": 0,
+//   "armor_class": 21,
+//   "initiative": 1,
+//   "movement_ft": 20,
+//   "str": 10,
+//   "dex": 10,
+//   "con": 100,
+//   "int": 10,
+//   "wis": 10,
+//   "cha": 10,
+//   "class_name": "Wizard",
+//   "subclass_name": "Kelly",
+//   "level": 20
+// }
