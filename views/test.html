@@ -47,9 +47,9 @@
             {{/each}}
         {{/if}}
 
-      <div class="text-center">
-        <a href="/character" class="button-custom">Add a Character Profile</a>
-      </div>
+        <div class="text-center">
+          <button type="button" class="button-custom" data-bs-toggle="modal" data-bs-target="#characterModal">Add a character</button>
+        </div>
     </div>
 </section>
 
@@ -110,7 +110,7 @@
       
     </div>
     <div class="modal-body">
-      <label class="form-label">Enter your party pass to join a campaign party, or create a party.</label>
+      <label class="form-label">Enter your party pass to join a campaign party.</label>
       <input type="" class="form-control" id="" placeholder="mypartypass">
       <div class="pt-3 row">
         <div class="col-3">
@@ -137,6 +137,106 @@
   
   </div>
   </div>
+
+
+
+  <!-- Modal -->
+<div id="characterModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+  
+  <!-- Modal content-->
+  <div class="modal-content">
+    <div class="modal-header">
+      <h4 class="modal-title">Add a Character</h4>
+      
+    </div>
+    <div class="modal-body">
+      <label class="form-label">Enter your character information</label>
+      
+      <div class="pt-3">
+        <label class="form-label">Character Name:</label>
+        <input type="" class="form-control" id="" placeholder="Blorf Whishelshnob">
+      </div>
+
+
+      <form class="pt-3">
+        <label class="form-label">Character Race</label>
+
+        <select class="form-select pt-3" aria-label="Default select example">
+          <option selected>Races</option>
+          <option value="1">Dragonborn</option>
+          <option value="2">Dwarf</option>
+          <option value="3">Elf</option>
+          <option value="4">Gnome</option>
+          <option value="5">Half-Elf</option>
+          <option value="6">Halfling</option>
+          <option value="7">Half-Orc</option>
+          <option value="8">Human</option>
+          <option value="9">Tiefling</option>
+        </select>
+       
+      </form>
+
+      <form class="pt-3">
+        <label class="form-label">Character Class</label>
+
+        <select class="form-select pt-3" aria-label="Default select example">
+          <option selected>Classes</option>
+          <option value="1">Barbarian</option>
+          <option value="2">Bard</option>
+          <option value="3">Cleric</option>
+          <option value="4">Druid</option>
+          <option value="5">Fighter</option>
+          <option value="6">Monk</option>
+          <option value="7">Paladin</option>
+          <option value="8">Ranger</option>
+          <option value="9">Rogue</option>
+          <option value="10">Sorcer</option>
+          <option value="11">Warlock</option>
+          <option value="12">Wizard</option>
+        </select>
+       
+      </form>
+
+      <form class="pt-3">
+        <label class="form-label">Character Alignment</label>
+
+        <select class="form-select pt-3" aria-label="Default select example">
+          <option selected>Alignments</option>
+          <option value="1">Lawful Good</option>
+          <option value="2">Neutral Good</option>
+          <option value="3">Chaotic Good</option>
+          <option value="4">Lawful Neutral</option>
+          <option value="5">Neutral</option>
+          <option value="6">Chaotic Neutral</option>
+          <option value="7">Lawful Evil</option>
+          <option value="8">Neutral Evil</option>
+          <option value="9">Chaotic Evil</option>
+        </select>
+       
+      </form>
+
+
+      
+    </div>
+
+    <div class="modal-body">
+      <div class="pt-3 row">
+        
+        <div class="col">
+          <button class="button-custom text-center"> Create Character Profile</button>
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="button-custom" data-bs-dismiss="modal">Close</button>
+    </div>
+  </div>
+  
+  </div>
+  </div>
+
+
   <script src="/javascript/logout.js"></script>
 
 
