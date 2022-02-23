@@ -27,4 +27,6 @@ async function newFormHandlerCharacter(event) {
   }
   
   document.querySelector('.create-character').addEventListenerCharacter('submit', newFormHandler);
+
+  //fix this in the morning.
   
