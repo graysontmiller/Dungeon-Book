@@ -44,7 +44,7 @@ router.post('/', (req, res) => {
         int: req.body.int,
         wis: req.body.wis,
         cha: req.body.cha,
-        class: req.body.class_name,
+        mainclass: req.body.class_name,
         subclass: req.body.subclass_name,
         level: req.body.level
     }, {

@@ -73,7 +73,7 @@ Character.init(
     cha: {
       type: DataTypes.INTEGER
     },
-    class: {
+    mainclass: {
       type: DataTypes.STRING
     },
     subclass: {
