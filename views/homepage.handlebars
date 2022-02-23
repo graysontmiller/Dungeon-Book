@@ -88,6 +88,7 @@
         </div>
       </div>
     </form>
+    
     <div class="modal-footer">
       <button type="button" class="button-custom" data-bs-dismiss="modal">Close</button>
     </div>
@@ -111,16 +112,18 @@
     <div class="modal-body">
       <label class="form-label">Enter your character information</label>
       
+    <form>
+
       <div class="pt-3">
         <label class="form-label">Character Name:</label>
-        <input type="" class="form-control" id="" placeholder="Blorf Whishelshnob">
+        <input type="" class="form-control" id="full_name" name="full_name" placeholder="Blorf Whishelshnob">
       </div>
 
 
-      <form class="pt-3">
+      <div class="pt-3">
         <label class="form-label">Character Race</label>
 
-        <select class="form-select pt-3" aria-label="Default select example">
+        <select class="form-select pt-3" id="race" name="race" aria-label="Default select example">
           <option selected>Races</option>
           <option value="1">Dragonborn</option>
           <option value="2">Dwarf</option>
@@ -133,12 +136,12 @@
           <option value="9">Tiefling</option>
         </select>
        
-      </form>
+      </div>
 
-      <form class="pt-3">
+      <div class="pt-3">
         <label class="form-label">Character Class</label>
 
-        <select class="form-select pt-3" aria-label="Default select example">
+        <select class="form-select pt-3" id="class" name="class" aria-label="Default select example">
           <option selected>Classes</option>
           <option value="1">Barbarian</option>
           <option value="2">Bard</option>
@@ -154,12 +157,12 @@
           <option value="12">Wizard</option>
         </select>
        
-      </form>
+      </div>
 
-      <form class="pt-3">
+      <div class="pt-3">
         <label class="form-label">Character Alignment</label>
 
-        <select class="form-select pt-3" aria-label="Default select example">
+        <select class="form-select pt-3" id="alignment" class="alignment" aria-label="Default select example">
           <option selected>Alignments</option>
           <option value="1">Lawful Good</option>
           <option value="2">Neutral Good</option>
@@ -172,7 +175,7 @@
           <option value="9">Chaotic Evil</option>
         </select>
        
-      </form>
+      </div>
 
 
       
@@ -182,10 +185,13 @@
       <div class="pt-3 row">
         
         <div class="col">
-          <button class="button-custom text-center"> Create Character Profile</button>
+          <button type="submit" class="button-custom text-center"> Create Character Profile</button>
         </div>
       </div>
     </div>
+
+    </form>
+
     <div class="modal-footer">
       <button type="button" class="button-custom" data-bs-dismiss="modal">Close</button>
     </div>
